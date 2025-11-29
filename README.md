@@ -2,17 +2,17 @@
 
 Force an in-place update from Windows 10 to 11 on unsupported computers, keeping all documents, programs, and the Windows license.
 
-This is intended to be used with an installer USB, and requires a USB stick (or other spare storage device) at least 8Gb in size. After this, you can either use the drive to update any computer you connect it to, or hand the drive off to someone so they can do it themselves.
+This is intended to be used with an installer USB, and requires a USB drive (or other spare storage device) at least 8Gb in size. After this, you can either use the USB drive to update any computer you connect it to, or hand the USB drive off to someone so they can do it themselves.
 
 ## Making the USB Updater
 
 1. Download the [Windows 11 ISO](https://www.microsoft.com/en-us/software-download/windows11) from Microsoft
-2. Download [Rufus](https://github.com/pbatard/rufus/releases)
+2. Download the latest version of [Rufus](https://github.com/pbatard/rufus/releases)
 3. Use Rufus to write the Windows 11 image to the USB drive, and enable the following:
    - Remove Requirement for 4GB RAM, Secure Boot and TPM 2.0
    - Remove  requirement for anonline Microsoft account
    - Disable Data collection (Skip privacy questions)
-4. Copy the files from this repository to the drive
+4. Copy the files from this repository to the USB drive
 
 ## Using the USB Updater
 
@@ -27,7 +27,6 @@ While the versions of your tools shouldn't matter (as long as they are up to dat
 - Updated from: Windows 10 22H2 (final released version - no more updates available)
 - Updated to: Windows 11 25H2
 - Rufus Version: 4.11
-
 
 ## References
 
