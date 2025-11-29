@@ -14,51 +14,7 @@ This is intended for lab, evaluation, or controlled environments where hardware 
 Author: asheroto
 Source: https://gist.github.com/asheroto/5087d2a38b311b0c92be2a4f23f92d3e
 Required: Run as Administrator
-
-.LICENSE
-Use at your own risk. No warranty expressed or implied.
 #>
-
-function Write-Section {
-<#
-.SYNOPSIS
-Displays a section header with borders using Write-Host and optional color.
-
-.DESCRIPTION
-Prints multi-line text surrounded by a hash border for readability.
-Supports output coloring via the Color parameter.
-
-.PARAMETER Text
-The text to display. Can include multiple lines.
-
-.PARAMETER Color
-(Optional) The color to use for the text and border. Defaults to White.
-
-.EXAMPLE
-Write-Section -Text "Starting Process"
-
-.EXAMPLE
-Write-Section -Text "Line 1`nLine 2" -Color Green
-#>
-    param (
-        [Parameter(Mandatory)]
-        [string]$Text,
-
-        [string]$Color = "White"
-    )
-
-    $lines = $Text -split "`n"
-    $maxLength = ($lines | Measure-Object -Property Length -Maximum).Maximum
-    $border = "#" * ($maxLength + 4)
-
-    Write-Host ""
-    Write-Host $border -ForegroundColor $Color
-    foreach ($line in $lines) {
-        Write-Host ("# " + $line.PadRight($maxLength) + " #") -ForegroundColor $Color
-    }
-    Write-Host $border -ForegroundColor $Color
-    Write-Host ""
-}
 
 function Set-RegistryValueForced {
     <#
